@@ -63,7 +63,8 @@ Finally, this would be the complete query to update the table with:
     where id ='0d4f7a40-651d-44fb-8744-04d9b31ef844';
 
 
-![image](https://github.com/esca999/ADDI-CHALLENGE/assets/152576656/373d23db-4c8f-469d-b12b-b6c8cc3191a9)
+![image](https://github.com/esca999/ADDI-CHALLENGE/assets/152576656/b7897760-8237-4a5e-9139-0756174d580f)
+
 
 
 3- Since we are having a hard time while creating all the store credentials manually thru insert queries we recently received a message from one Software Engineer that build an API that will allow you to create new stores quickly. Currently we don't have system integrated thru this API but we can use it right now. Build an HTTP request to add the store credentials through our API. The id of the store is 1f585fc9-4926-468c-a728-eb34d80e9ea1
