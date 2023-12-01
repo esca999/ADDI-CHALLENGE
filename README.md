@@ -122,9 +122,11 @@ Then we repeat the process now with the GET request to verify that we have added
 
 ![image](https://github.com/esca999/ADDI-CHALLENGE/assets/152576656/ff37e652-f1e8-40f3-907e-be2b6595714d)
 
-Finally, using Visual Studio Code, we export the event log to perform the search in this case filtering by error 404. 
+Finally, using Visual Studio Code, we export the event log to perform the search in this case filtering by error 404 and credentials, as these were the companies affected by the API bug
 
-![image](https://github.com/esca999/ADDI-CHALLENGE/assets/152576656/e4536a99-d85d-4a30-ace2-28ca333bbd10)
+![image](https://github.com/esca999/ADDI-CHALLENGE/assets/152576656/a1448784-3b80-4c16-8dfa-d2c8532f14a7)
+
+
 
 Then we copy it to a notes blog to deliver the final filtering and be able to see it in a more organized way, if you want to copy it to another file within VSC.
 
