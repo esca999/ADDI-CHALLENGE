@@ -16,14 +16,18 @@ Para la realización de este primer punto se debe crear la siguiente consulta, t
 
 -- Inquiry for a list of labels and the number of stores using them:
 
-SELECT
+    
 
-DISTINCT regexp_split_to_table(data->>'tags', '"?,\s*"?') AS ETIQUETAS,
-
-COUNT(*) AS CONTEO_TIENDAS
-
-FROM stores
+    SELECT
+    DISTINCT regexp_split_to_table(data->>'tags', '"?,\s*"?') AS ETIQUETAS,
   
-GROUP BY 
+    COUNT(*) AS CONTEO_TIENDAS
 
-ETIQUETAS;
+    FROM stores
+  
+    GROUP BY 
+
+    ETIQUETAS; 
+
+![image](https://github.com/esca999/ADDI-CHALLENGE/assets/152576656/08e025dd-564f-4589-a805-40473e8e70b9)
+
