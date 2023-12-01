@@ -12,3 +12,6 @@ Before starting the test you must prepare the test environment in this case it i
 
 
 Para la realización de este primer punto se debe crear la siguiente consulta, teniendo en cuenta que la BBDD se encuentra en un formato .json y de igual forma se encuentra en un sistema de adminitración de base de datos PostgreSQL.
+
+
+-- Inquiry for a list of labels and the number of stores using them
