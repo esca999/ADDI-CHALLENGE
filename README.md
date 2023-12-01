@@ -6,7 +6,7 @@ Before starting the test you must prepare the test environment in this case it i
 * Have docker compose installed
 * Have Git installed
 
-1- You received a message from a person from the Go To Market team that oversee the Stores operation. They need an information from our database and you could help this person to have it by doing a query there. The person requested a list of all the tags that we currently use and how many stores are using each tag. Create a query that allow you to provide this information to the Go To Market team.
+1- You received a message from a person from the Go To Market team that oversee the Stores operation. They need an information from our database and you could help this person to have it by doing a query there. The person requested a list of all the tags that we currently use and how many stores are using each tag. Create a query that allow you to provide this information to the Go To Market team. 
 
 *This is done in the DB administration application of your choice (in this case DBeaver was used).*
 
@@ -14,4 +14,16 @@ Before starting the test you must prepare the test environment in this case it i
 Para la realización de este primer punto se debe crear la siguiente consulta, teniendo en cuenta que la BBDD se encuentra en un formato .json y de igual forma se encuentra en un sistema de adminitración de base de datos PostgreSQL.
 
 
--- Inquiry for a list of labels and the number of stores using them
+-- Inquiry for a list of labels and the number of stores using them:
+
+SELECT
+
+DISTINCT regexp_split_to_table(data->>'tags', '"?,\s*"?') AS ETIQUETAS,
+
+COUNT(*) AS CONTEO_TIENDAS
+
+FROM stores
+  
+GROUP BY 
+
+ETIQUETAS;
