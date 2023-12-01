@@ -11,7 +11,7 @@ Before starting the test you must prepare the test environment in this case it i
 *This is done in the DB administration application of your choice (in this case DBeaver was used).*
 
 
-Para la realización de este primer punto se debe crear la siguiente consulta, teniendo en cuenta que la BBDD se encuentra en un formato .json y de igual forma se encuentra en un sistema de adminitración de base de datos PostgreSQL.
+Solution: For the realization of this first point, the following query must be created, taking into account that the database is in a .json format and it is also in a PostgreSQL database management system.
 
 
 -- Inquiry for a list of labels and the number of stores using them:
@@ -30,4 +30,10 @@ Para la realización de este primer punto se debe crear la siguiente consulta, t
     ETIQUETAS; 
 
 ![image](https://github.com/esca999/ADDI-CHALLENGE/assets/152576656/08e025dd-564f-4589-a805-40473e8e70b9)
+
+
+2- We just received a case where the owner of the store with the id 0d4f7a40-651d-44fb-8744-04d9b31ef844 changed to Old-Wolf. They also stopped to sell things related to finanzas and are now working with educacion so they also required a change in their current tags. Since this is urgent we will do that thru a query. Create a query that allow us to do this update in our database.
+
+
+
 
