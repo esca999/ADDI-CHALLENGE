@@ -62,7 +62,6 @@ Finally, this would be the complete query to update the table with:
     set data = replace(data::text, 'Young-Wolf', 'Old Wolf')::jsonb
     where id ='0d4f7a40-651d-44fb-8744-04d9b31ef844';
 
-    select * from stores where id ='0d4f7a40-651d-44fb-8744-04d9b31ef844';
 
 ![image](https://github.com/esca999/ADDI-CHALLENGE/assets/152576656/373d23db-4c8f-469d-b12b-b6c8cc3191a9)
 
