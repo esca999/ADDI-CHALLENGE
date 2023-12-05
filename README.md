@@ -16,22 +16,22 @@ Before starting the test you must prepare the test environment in this case it i
 Solution: For the realization of this first point, the following query must be created, taking into account that the database is in a .json format and it is also in a PostgreSQL database management system.
 
 
--- Inquiry for a list of labels and the number of stores using them:
+-- Inquiry for a list items and the number of stores using them:
 
-    
 
-    SELECT
-    DISTINCT regexp_split_to_table(data->>'tags', '"?,\s*"?') AS ETIQUETAS,
-  
-    COUNT(*) AS CONTEO_TIENDAS
+  	SELECT
+    tag AS ITEM,
+    COUNT(*) AS "NÚMERO DE TIENDAS"
+	FROM stores,
+	LATERAL (
+    SELECT UNNEST(ARRAY[data->'tags'->>'tag1', data->'tags'->>'tag2', data->'tags'->>'tag3']) AS tag
+	) AS tags
+	WHERE tag IN ('belleza', 'ropa', 'finanzas', 'desportes', 'movilidad', 'tecnologia', 'hogar', 'educacion', 'apparel') 
+	GROUP BY ITEM
+	ORDER BY ITEM; 
 
-    FROM stores
-  
-    GROUP BY 
+![image](https://github.com/esca999/ADDI-CHALLENGE/assets/152576656/bc36a06f-3c31-4a78-aef2-8d4a595696af)
 
-    ETIQUETAS; 
-
-![image](https://github.com/esca999/ADDI-CHALLENGE/assets/152576656/08e025dd-564f-4589-a805-40473e8e70b9)
 
 
 2- We just received a case where the owner of the store with the id 0d4f7a40-651d-44fb-8744-04d9b31ef844 changed to Old-Wolf. They also stopped to sell things related to finanzas and are now working with educacion so they also required a change in their current tags. Since this is urgent we will do that thru a query. Create a query that allow us to do this update in our database.
